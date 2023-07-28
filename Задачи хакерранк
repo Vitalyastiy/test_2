@@ -1,0 +1,46 @@
+-- наименьший общий делитель
+--задаем начальное значение d равным 1, затем циклически увеличиваем его на 1 (d += 1), пока оно не будет делиться на оба числа a и b без остатка
+a = int(input()) 
+b = int(input())
+d = 1
+while d % a != 0 or d % b != 0: 
+    d += 1
+print(d)
+
+
+-- найти элемент массива циклом
+n = 6
+arr = [2, 3, 6, 6, 5]
+cnt = 0
+for i in range(len(arr)):
+   if arr[i] == n: 
+     print(i+1)
+
+--условия + условие в диапазоне
+if n%2 != 0: 
+    print("Weird") 
+elif n%2==0 and n>=2 and n<=6: 
+    print("Not Weird") 
+elif n%2==0 and n in range(6,21):
+    print ("Weird") 
+elif n>20 and n%2==0: 
+    print("Not Weird")
+
+
+--- пример вайла(пока не выпадет 0)
+a = int(input())
+s=0
+while a > 0 or a < 0:
+    s+=a
+    a = int(input())
+print(s)
+
+
+--- бесклнечный цикл по условиям
+while True:
+     a = int(input())
+     if a<10:
+        continue
+     elif a >100:
+        break
+     print(a)
